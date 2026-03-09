@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>会社概要｜MEO格安運用</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Outfit:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#34A853;--green2:#2d9248;--green-lt:rgba(52,168,83,0.10);--green-bd:rgba(52,168,83,0.25);
+  --white:#FFFFFF;--bg:#F8FAF8;--bg2:#EFF4EF;
+  --text:#1C2B1C;--text2:#3D4D3D;--muted:#7A8C7A;--border:#D8E4D8;
+  --shadow:0 2px 16px rgba(28,43,28,0.08);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'M PLUS Rounded 1c','Noto Sans JP',sans-serif;line-height:1.75}
+
+/* HEADER */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;height:64px;
+  background:rgba(248,250,248,0.95);backdrop-filter:blur(12px);
+  border-bottom:2px solid var(--green);
+}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1rem;color:var(--text);text-decoration:none}
+.logo em{color:var(--green);font-style:normal}
+.h-back{
+  display:flex;align-items:center;gap:6px;
+  color:var(--muted);font-size:0.85rem;font-weight:600;
+  text-decoration:none;transition:color 0.2s;
+}
+.h-back:hover{color:var(--green)}
+
+/* HERO */
+.page-hero{
+  padding:120px 40px 72px;
+  background:var(--text);
+  position:relative;overflow:hidden;text-align:center;
+}
+.page-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(52,168,83,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(52,168,83,0.06) 1px,transparent 1px);
+  background-size:40px 40px;pointer-events:none;
+}
+.page-hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(52,168,83,0.15);border:1px solid rgba(52,168,83,0.3);
+  color:var(--green);font-size:0.72rem;font-weight:700;letter-spacing:0.12em;
+  padding:6px 16px;border-radius:20px;margin-bottom:20px;position:relative;
+}
+.page-hero h1{
+  font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;
+  position:relative;margin-bottom:12px;
+}
+.page-hero p{color:rgba(255,255,255,0.5);font-size:0.95rem;position:relative}
+
+/* MAIN */
+main{max-width:800px;margin:0 auto;padding:72px 40px 100px}
+
+/* 会社説明 */
+.company-intro{
+  background:var(--white);border-radius:16px;padding:40px;
+  border:1px solid var(--border);margin-bottom:40px;
+  box-shadow:var(--shadow);
+}
+.ci-icon{font-size:2.5rem;margin-bottom:16px;display:block}
+.ci-title{
+  font-size:1.3rem;font-weight:900;color:var(--text);
+  margin-bottom:20px;line-height:1.4;
+}
+.ci-title em{color:var(--green);font-style:normal}
+.ci-body p{
+  font-size:0.97rem;color:var(--text2);line-height:2;
+  margin-bottom:16px;
+}
+.ci-body p:last-child{margin-bottom:0}
+.ci-body strong{color:var(--text);font-weight:700}
+
+/* 会社概要テーブル */
+.company-table-wrap{
+  background:var(--white);border-radius:16px;
+  border:1px solid var(--border);overflow:hidden;
+  box-shadow:var(--shadow);margin-bottom:40px;
+}
+.ct-header{
+  background:var(--green);color:#fff;
+  padding:18px 28px;font-weight:700;font-size:0.95rem;
+  display:flex;align-items:center;gap:8px;
+}
+table{width:100%;border-collapse:collapse}
+tr{border-bottom:1px solid var(--border)}
+tr:last-child{border-bottom:none}
+th{
+  width:140px;padding:18px 24px;
+  background:var(--bg2);
+  font-size:0.82rem;font-weight:700;color:var(--muted);
+  text-align:left;vertical-align:top;white-space:nowrap;
+}
+td{
+  padding:18px 24px;font-size:0.92rem;color:var(--text2);
+  line-height:1.75;
+}
+td a{color:var(--green);text-decoration:none}
+td a:hover{text-decoration:underline}
+
+/* ミッション */
+.mission-card{
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  border-radius:16px;padding:36px;color:#fff;
+  position:relative;overflow:hidden;margin-bottom:40px;
+}
+.mission-card::before{content:'🧭';position:absolute;right:-10px;bottom:-10px;font-size:6rem;opacity:0.1}
+.mc-label{font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;opacity:0.7;margin-bottom:12px}
+.mc-text{font-size:clamp(1rem,2.5vw,1.3rem);font-weight:700;line-height:1.65;position:relative}
+
+/* 戻るボタン */
+.back-wrap{text-align:center}
+.btn-back{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green);color:#fff;
+  font-family:inherit;font-weight:700;font-size:0.95rem;
+  padding:14px 32px;border-radius:28px;border:none;
+  text-decoration:none;
+  box-shadow:0 4px 20px rgba(52,168,83,0.3);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.btn-back:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(52,168,83,0.4)}
+
+/* FOOTER */
+footer{
+  background:var(--text);padding:32px 40px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+}
+.f-logo{display:flex;align-items:center;gap:7px;font-weight:700;color:rgba(255,255,255,0.7);font-size:0.9rem}
+.f-logo em{color:var(--green);font-style:normal}
+footer p{font-size:0.7rem;color:rgba(255,255,255,0.2);width:100%}
+
+@media(max-width:680px){
+  header{padding:0 20px}
+  .page-hero{padding:100px 24px 56px}
+  main{padding:52px 20px 80px}
+  .company-intro{padding:28px 20px}
+  th{width:100px;padding:14px 16px}
+  td{padding:14px 16px}
+  footer{padding:28px 20px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">📍 MEO<em>格安</em>運用</a>
+  <a href="index.html" class="h-back">← LPに戻る</a>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-tag">COMPANY</div>
+  <h1>会社概要</h1>
+  <p>私たちについて</p>
+</div>
+
+<main>
+
+  <!-- 想い -->
+  <div class="company-intro">
+    <span class="ci-icon">💡</span>
+    <h2 class="ci-title">なぜ、このサービスを<br><em>つくったのか。</em></h2>
+    <div class="ci-body">
+      <p>営業会社で多くのサービス提案に携わる中で感じていたのは、<strong>価値そのものよりも、組織コストや販管費によって価格が膨らんでいるケースが少なくない</strong>ということでした。</p>
+      <p>これからの時代は、会社の規模や看板ではなく、<strong>どれだけ本質的な価値を、合理的な価格で届けられるか</strong>が問われる。その考えから、AIを活用した新しいサービスモデルを形にしようと考えました。</p>
+    </div>
+  </div>
+
+  <!-- 事業 -->
+  <div class="company-intro">
+    <span class="ci-icon">🚀</span>
+    <h2 class="ci-title">私たちが<em>目指すこと。</em></h2>
+    <div class="ci-body">
+      <p>当社は、<strong>AIの力で高コストな運用サービスの価格構造を見直し</strong>、より多くの事業者が使いやすいサービスへ再設計していくことを目指しています。</p>
+      <p>そしてその先には、サービスを届ける側にも新しい可能性をつくりたいと考えています。将来的には、<strong>副業を志す社会人や個人が、企業との接点づくりや紹介を通じて収入を得られる仕組み</strong>を構築し、企業のコスト最適化と、個人の収入機会創出を同時に実現する事業基盤へ育てていく構想です。</p>
+    </div>
+  </div>
+
+  <!-- ミッション -->
+  <div class="mission-card">
+    <div class="mc-label">OUR MISSION</div>
+    <div class="mc-text">払いすぎをなくす。<br>AI時代に合った、合理的なサービスの形をつくる。</div>
+  </div>
+
+  <!-- 会社概要テーブル -->
+  <div class="company-table-wrap">
+    <div class="ct-header">📋 基本情報</div>
+    <table>
+      <tr>
+        <th>運営者</th>
+        <td>小原 雅史（Masashi Ohara）</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>大阪府大阪市東淀川区淡路</td>
+      </tr>
+      <tr>
+        <th>事業内容</th>
+        <td>MEO運用代行 / AIを活用した各種運用サービスの提供</td>
+      </tr>
+      <tr>
+        <th>設立</th>
+        <td>2025年</td>
+      </tr>
+      <tr>
+        <th>お問い合わせ</th>
+        <td><a href="mailto:masashiohara611222@gmail.com">masashiohara611222@gmail.com</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="back-wrap">
+    <a href="index.html" class="btn-back">📍 サービスページに戻る</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="f-logo">📍 <span>MEO<em>格安</em>
